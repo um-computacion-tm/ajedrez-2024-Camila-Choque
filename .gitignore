@@ -1,1 +1,3 @@
 entorno_ajedrez/ 
+__pycache__/
+.coverage
