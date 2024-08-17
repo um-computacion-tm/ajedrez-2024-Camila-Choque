@@ -32,3 +32,4 @@
 
 - Se agrego el movimiento vertical de la torre.
 - Se agrego el movimiento horizontal de la torre.
+- Se agrego en el archivo BOARD las posiciones de las reinas.
