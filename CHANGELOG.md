@@ -25,3 +25,10 @@
 - Se verifica si la reina se mueve horizontalmente dentro de la misma fila 
 - Se verifica si la reina se mueve verticalmente dentro de la misma columa.
 - Se añadió una validación para movimientos diagonales.
+
+# [1.1.1] 17-08-2024
+
+### Agregado 
+
+- Se agrego el movimiento vertical de la torre.
+- Se agrego el movimiento horizontal de la torre.
