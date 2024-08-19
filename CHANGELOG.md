@@ -33,3 +33,9 @@
 - Se agrego el movimiento vertical de la torre.
 - Se agrego el movimiento horizontal de la torre.
 - Se agrego en el archivo BOARD las posiciones de las reinas.
+
+# [1.1.1] 18-08-2024
+
+### Agregado 
+
+-Se creo el metodo is_clear_path en el archivo QUEEN que asegura que una pieza puede moverse de un punto a otro sin que haya otras piezas bloqueando el camino. 
