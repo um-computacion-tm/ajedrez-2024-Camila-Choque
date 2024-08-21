@@ -5,7 +5,7 @@
 - Una carpeta GAME con los archivos BOARD y CHESS.
 - Una carpeta PIECE con el archivo ROOK.
  
-# [1.1.1] 15-08-2024
+# [1.1.2] 15-08-2024
 
 ### Agregado 
 
@@ -16,7 +16,7 @@
 - Se agrego la pieza reina.
 - La interfaz del usuario CLI. 
 
-# [1.1.1] 16-08-2024
+# [1.1.3] 16-08-2024
 
 ### Agregado 
 
@@ -26,7 +26,7 @@
 - Se verifica si la reina se mueve verticalmente dentro de la misma columa.
 - Se añadió una validación para movimientos diagonales.
 
-# [1.1.1] 17-08-2024
+# [1.1.4] 17-08-2024
 
 ### Agregado 
 
@@ -34,13 +34,13 @@
 - Se agrego el movimiento horizontal de la torre.
 - Se agrego en el archivo BOARD las posiciones de las reinas.
 
-# [1.1.1] 18-08-2024
+# [1.1.5] 18-08-2024
 
 ### Agregado 
 
--Se creo el metodo is_clear_path en el archivo QUEEN que asegura que una pieza puede moverse de un punto a otro sin que haya otras piezas bloqueando el camino. 
+- Se creo el metodo is_clear_path en el archivo QUEEN que asegura que una pieza puede moverse de un punto a otro sin que haya otras piezas bloqueando el camino. 
 
-# [1.1.1] 20-08-2024
+# [1.1.6] 20-08-2024
 
 ### Agregado 
 
@@ -51,3 +51,11 @@
 - Se creo un archivo KNIGHT.
 - Se creo las posiciones del los alfiles.
 - Se creo el archivo BISHOP. 
+
+# [1.1.7] 21-08-2024
+
+### Agregado 
+- Se cambio el moviento de ROOK.
+- La funcion valid_rook se encarga de los moviemintos horizontales y verticales de la torre.
+
+

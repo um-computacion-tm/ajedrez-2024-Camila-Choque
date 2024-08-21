@@ -25,5 +25,3 @@ def play(chess): # El programa solicita al usuario que ingrese la fila y la colu
 
 
 
-if __name__ == '__main__':
-    main()
