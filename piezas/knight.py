@@ -1,0 +1,3 @@
+from piezas.piece import Piece
+class Knight(Piece):
+    ...

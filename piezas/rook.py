@@ -1,4 +1,4 @@
-from piece import Piece
+from piezas.piece import Piece 
 from game.board import Board
 
 

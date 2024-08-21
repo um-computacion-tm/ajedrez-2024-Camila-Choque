@@ -39,3 +39,15 @@
 ### Agregado 
 
 -Se creo el metodo is_clear_path en el archivo QUEEN que asegura que una pieza puede moverse de un punto a otro sin que haya otras piezas bloqueando el camino. 
+
+# [1.1.1] 20-08-2024
+
+### Agregado 
+
+- Se creo en BOARD las posiciones de los caballos.
+- Se verifico las posiciones de los caballos.
+- Se verifico las posiciones de las reinas.
+- Se creo las posiciones del rey.
+- Se creo un archivo KNIGHT.
+- Se creo las posiciones del los alfiles.
+- Se creo el archivo BISHOP. 
