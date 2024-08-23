@@ -18,7 +18,8 @@ class Board:
         self.__positions__[0][7] = Rook("BLACK") 
         self.__positions__[7][7] = Rook("WHITE") 
         self.__positions__[7][0] = Rook("WHITE") 
-
+        
+        """"
         #POSICIONES REINA    
         self.__positions__[0][3] = Queen("BLACK") 
         self.__positions__[7][3] = Queen("WHITE")
@@ -38,6 +39,7 @@ class Board:
         self.__positions__[0][6] = Bishop("BLACK") 
         self.__positions__[7][1] = Bishop("WHITE") 
         self.__positions__[7][6] = Bishop("WHITE") 
+        """
 
 
 

@@ -58,4 +58,11 @@
 - Se cambio el moviento de ROOK.
 - La funcion valid_rook se encarga de los moviemintos horizontales y verticales de la torre.
 
+# [1.1.8] 22-08-2024
+
+### Agregado 
+- Se modifico el moviento de ROOK.
+- Se creo el test de ROOk.
+- Se hiceron algunas configuraciones.
+- Se cambiaron algunas funciones. 
 

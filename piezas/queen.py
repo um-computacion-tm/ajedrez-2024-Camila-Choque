@@ -1,5 +1,5 @@
 from piezas.piece import Piece
-from game.board import Board
+
 
 class Queen(Piece):
 
@@ -7,6 +7,7 @@ class Queen(Piece):
   self.nombre = Queen
   self.movimiento = movimiento
 
+""""
 def valid_move_queen(self, from_row, from_col, to_row, to_col):
    #MOVIMIENTO HORIZONTAL
    if from_row == to_row and from_col != to_col:
@@ -37,3 +38,5 @@ def is_clear_path(self, from_row, from_col, to_row, to_col, board):
             current_col += col_step
 
         return True
+
+"""

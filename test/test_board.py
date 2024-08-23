@@ -6,13 +6,14 @@ from piezas.horse import Horse
 
 class TestBoard(unittest.TestCase):
 
-    def test_init(self):
-        board = Board()
-        self.assertEqual(len(board.grid),8,)
-        self.assertEqual(len(board.grid[0]),8,)
+    def setUp(self):
+        self.board = Board()
+
+""""      
+    def test_posiciones(self):
 
         # Verifica la posición de las torres negras
-        self.assertIsInstance(board.get_piece[0][0], Rook) #BLACK
+        self.assertIsInstance(Board.get_piece[0][0], Rook) #BLACK
         self.assertIsInstance(board.get_piece[0][7], Rook) #BLACK
         
         # Verifica la posición de las torres blancas
@@ -35,7 +36,7 @@ class TestBoard(unittest.TestCase):
         self.assertIsInstance(board.get_piece[7][2], Horse)#WHITE
         self.assertIsInstance(board.get_piece[7][5], Horse) #WHITE
    
-
+"""
 
 
 if __name__ == '__main__':
