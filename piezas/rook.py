@@ -18,5 +18,3 @@ class Rook(Piece):
                else:
                     break
           return movimientos_nuevos
-
-                

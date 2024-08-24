@@ -66,3 +66,11 @@
 - Se hiceron algunas configuraciones.
 - Se cambiaron algunas funciones. 
 
+# [1.1.9] 23-08-2024
+
+### Agregado 
+- Se implementó la lógica para calcular los movimientos válidos de un caballo. 
+- El método genera una lista de posibles movimientos en forma de "L".
+- Se agregó una verificación para asegurar que los movimientos estén dentro de los límite(8x8).
+- Los movimientos válidos se agregan a la lista moves y se devuelven al final del método.
+- Se agrego un test que verifica los movimientos desde una posicion. 
