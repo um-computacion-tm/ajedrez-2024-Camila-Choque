@@ -74,3 +74,10 @@
 - Se agregó una verificación para asegurar que los movimientos estén dentro de los límite(8x8).
 - Los movimientos válidos se agregan a la lista moves y se devuelven al final del método.
 - Se agrego un test que verifica los movimientos desde una posicion. 
+
+# [1.1.10] 24-08-2024
+
+### Agregado 
+- Se agrego el test de HORSE en la posicon esquina.
+- Se agrego el test de HORSE en la posicion borde.
+- Se agrego el test de HORSE en la poscion borde pero no en una esquina.
