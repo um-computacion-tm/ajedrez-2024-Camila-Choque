@@ -1,8 +1,6 @@
 import unittest
 from game.board import Board
-from piezas.rook import Rook
-from piezas.queen import Queen
-from piezas.horse import Horse
+
 
 class TestBoard(unittest.TestCase):
 

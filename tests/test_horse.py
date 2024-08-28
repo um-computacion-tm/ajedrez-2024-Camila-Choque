@@ -26,7 +26,8 @@ class TestHorse(unittest.TestCase):
         resultado_posicion = [(5,5),(5,3),(6,6),(6,2)]
         resultado = self.horse.horse_moves(7,4)
         self.assertEqual(resultado,resultado_posicion)
-
+        
+   ##ESTA AHI FUNCIONA 
 
 
     

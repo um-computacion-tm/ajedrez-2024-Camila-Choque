@@ -81,3 +81,13 @@
 - Se agrego el test de HORSE en la posicon esquina.
 - Se agrego el test de HORSE en la posicion borde.
 - Se agrego el test de HORSE en la poscion borde pero no en una esquina.
+
+# [1.1.11] 27-08-2024
+
+### Agregado 
+- Se agrego el test de KING con el setUp.
+- Se agrego el str en HORSE
+- Se agrego el str en KING
+- Se agrego el str en ROOK
+- Se agrego el metodo valid_move_king para los movimientos del rey.
+- Se borro el metodo del movimiento de la torre para mejorlo y porque daba problemas. 

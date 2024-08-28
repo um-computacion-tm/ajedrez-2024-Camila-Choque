@@ -1,5 +1,8 @@
 [run]
-source = main
+source = 
+    game
+    test
+    piezas 
 omit =
     venv/*
     */test/*

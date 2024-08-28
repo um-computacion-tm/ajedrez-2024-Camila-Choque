@@ -1,8 +1,5 @@
 from piezas.rook import Rook
-from piezas.queen import Queen
-from piezas.horse import Horse
-from piezas.knight import Knight
-from piezas.bishop import Bishop
+from piezas.king import King
 
 
 class Board:
@@ -18,6 +15,12 @@ class Board:
         self.__positions__[0][7] = Rook("BLACK") 
         self.__positions__[7][7] = Rook("WHITE") 
         self.__positions__[7][0] = Rook("WHITE") 
+
+          #PISICIONES REY
+        self.__positions__[0][4] = King("BLACK") 
+        self.__positions__[7][4] = King("WHITE") 
+
+
         
         """"
         #POSICIONES REINA    
@@ -40,9 +43,11 @@ class Board:
         self.__positions__[7][1] = Bishop("WHITE") 
         self.__positions__[7][6] = Bishop("WHITE") 
         """
-
+       
 
 
 
     def get_piece(self, row, col):
         return self.__positions__[row][col]
+    
+    
