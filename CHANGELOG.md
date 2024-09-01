@@ -91,3 +91,15 @@
 - Se agrego el str en ROOK
 - Se agrego el metodo valid_move_king para los movimientos del rey.
 - Se borro el metodo del movimiento de la torre para mejorlo y porque daba problemas. 
+
+# [1.1.12] 01-09-2024
+
+### Agregado 
+- Se agrego el movimiento de la torre ascendente.
+- Se agrego el movimiento de la torre descendente.
+- Se agrego un test del movimiento de la torre.
+- Se arreglaron varias cosas.
+- Se soluciono algunos problemas de importacion.
+- Se agrego un str en PIECE.
+- Se agrego carpeta PAWN. 
+- Se agrego set_piece en BOARD.
