@@ -3,7 +3,6 @@ from piezas.king import King
 class TestHorse(unittest.TestCase):
 
     def setUp(self):
-        
         self.king = King("BLACK")
 
     

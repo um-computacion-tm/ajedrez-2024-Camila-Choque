@@ -1,5 +1,6 @@
 from piezas.rook import Rook
 from piezas.king import King
+from piezas.horse import Horse
 
 
 class Board:
@@ -19,23 +20,20 @@ class Board:
         self.__positions__[0][4] = King("BLACK") 
         self.__positions__[7][4] = King("WHITE") 
 
+        self.__positions__[0][1] = Horse("BLACK") 
+        self.__positions__[0][6] = Horse("BLACK") 
+        self.__positions__[7][1] = Horse("WHITE") 
+        self.__positions__[7][6] = Horse("WHITE") 
 
+
+        
         
         """"
         #POSICIONES REINA    
         self.__positions__[0][3] = Queen("BLACK") 
         self.__positions__[7][3] = Queen("WHITE")
         
-        #PISICIONES CABALLOS
-        self.__positions__[0][2] = Horse("BLACK") 
-        self.__positions__[0][5] = Horse("BLACK") 
-        self.__positions__[7][2] = Horse("WHITE") 
-        self.__positions__[7][5] = Horse("WHITE") 
-
-        #PISICIONES REY
-        self.__positions__[0][4] = Knight("BLACK") 
-        self.__positions__[7][4] = Knight("WHITE") 
-
+    
         #PISICION ALFIL
         self.__positions__[0][1] = Bishop("BLACK") 
         self.__positions__[0][6] = Bishop("BLACK") 
