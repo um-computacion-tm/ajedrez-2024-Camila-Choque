@@ -1,3 +1,14 @@
+# [1.1.14] 03-09-2024
+### Agregado 
+
+- Se agrego el movimiento horizontal de la torre hacia la derecha.
+- Se agrego el movimiento horizontal de la torre hacia la izquierda.
+- Se agrego el archivo exceptions.py con las excepciones.
+- Se modifico el get_piece de BOARD.
+- Se agrego el metodo move en BOARD.
+- Se modifico el archivo CLI.
+----------------------------------------------------
+
 # [1.1.13] 02-09-2024
 ### Agregado 
 

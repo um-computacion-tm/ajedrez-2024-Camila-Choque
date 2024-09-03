@@ -1,6 +1,9 @@
 from piezas.rook import Rook
 from piezas.king import King
 from piezas.horse import Horse
+from game.exceptions import OutOfBoard
+
+
 
 
 class Board:
@@ -55,8 +58,23 @@ class Board:
             board_str += "\n"
         return board_str
 
-    def get_piece(self, row, col):
-        return self.__positions__[row][col]
-
+   
     def set_piece(self, row, col, piece):
         self.__positions__[row][col] = piece
+
+    
+
+    def get_piece(self, row, col):
+        if not (
+            0 <= row < 8 or 0 <= col < 8
+        ):
+            raise OutOfBoard()
+        return self.__positions__[row][col]
+
+    
+    def move(self, from_row, from_col, to_row, to_col):
+        origin = self.get_piece(from_row, from_col)
+        self.set_piece(to_row, to_col, origin)
+        self.set_piece(from_row, from_col, None)
+
+
