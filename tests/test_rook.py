@@ -22,7 +22,21 @@ class TestRook(unittest.TestCase):
         resultados = self.__rook__.possible_positions_va(5,4)
         self.assertEqual(resultados,movimientos)
 
+    def test_move_vertical_derecha(self):
+        movimientos = [(2,4),(2,5),(2,6),(2,7)]
+        resultados = self.__rook__.possible_positions_derecha(2,3)
+        self.assertEqual(resultados,movimientos)
 
+    def test_move_vertical_izquierda(self):
+        movimientos = [(2,2),(2,1),(2,0)]
+        resultados = self.__rook__.possible_positions_izquierda(2,3)
+        self.assertEqual(resultados,movimientos)
+
+
+   
+
+
+   
    
   
   

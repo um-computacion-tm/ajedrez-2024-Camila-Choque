@@ -1,3 +1,10 @@
+# [1.1.15] 04-09-2024
+### Agregado 
+- Se agrego el test que verifica el movimiento horizontal hacia la derecha de la torre.
+- Se agrego el test que verifica el movimiento horizontal hacia la izquierda de la torre.
+----------------------------------------------------
+
+
 # [1.1.14] 03-09-2024
 ### Agregado 
 

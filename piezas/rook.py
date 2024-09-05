@@ -20,13 +20,13 @@ class Rook(Piece):
    
 
    #ARREGLARRRRRRRRRRRRRRRRRRRRRRR
-   def possible_positions_d(self, row, col):
+   def possible_positions_derecha(self, row, col):
     possibles = []
     for next_col in range(col + 1, 8):  
         possibles.append((row, next_col))
     return possibles
    
-   def possible_positions_i(self, row, col):
+   def possible_positions_izquierda(self, row, col):
     possibles = []
     for next_col in range(col - 1, -1, -1):  
         possibles.append((row, next_col))
