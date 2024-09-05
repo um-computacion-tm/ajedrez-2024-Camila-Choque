@@ -19,7 +19,6 @@ class Rook(Piece):
         return possibles    
    
 
-   #ARREGLARRRRRRRRRRRRRRRRRRRRRRR
    def possible_positions_derecha(self, row, col):
     possibles = []
     for next_col in range(col + 1, 8):  

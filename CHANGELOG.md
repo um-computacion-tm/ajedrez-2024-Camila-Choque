@@ -1,3 +1,12 @@
+# [1.1.16] 05-09-2024
+### Agregado 
+- Se agrego el movimiento hacia adelante del peon.
+- Se agrego el archivo test_pawn.
+- Se agrego las posciones de los peones en BOARD.
+- Se afrego un test_pawn que se debe arreglar.
+----------------------------------------------------
+
+
 # [1.1.15] 04-09-2024
 ### Agregado 
 - Se agrego el test que verifica el movimiento horizontal hacia la derecha de la torre.
