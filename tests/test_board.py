@@ -33,10 +33,8 @@ class TestBoard(unittest.TestCase):
         #Verifica la posicion del rey blanco y negro
         self.assertIsInstance(self.board.get_piece(0,4), King)#WHITE
         self.assertIsInstance(self.board.get_piece(7,4), King) #BLACK
-   
-   
 
-
+    
 
 if __name__ == '__main__':
     unittest.main()

@@ -8,12 +8,27 @@ class Rook(Piece):
    
    def possible_positions_vd(self,row,col):
         possibles = []
-        for next_row in range(row +1, 8): #range(inicio, fin que no esta incluido)
+        for next_row in range(row +1, 8): 
             possibles.append((next_row, col))
         return possibles
     
    def possible_positions_va(self, row, col):
         possibles = []
-        for next_row in range(row -1, -1, -1): #range(inicio, fin que no esta incluido)
+        for next_row in range(row -1, -1, -1): 
             possibles.append((next_row, col))
         return possibles    
+   
+
+   #ARREGLARRRRRRRRRRRRRRRRRRRRRRR
+   def possible_positions_derecha(self, row, col):
+    possibles = []
+    for next_col in range(col + 1, 8):  
+        possibles.append((row, next_col))
+    return possibles
+   
+   def possible_positions_izquierda(self, row, col):
+    possibles = []
+    for next_col in range(col - 1, -1, -1):  
+        possibles.append((row, next_col))
+    return possibles
+
