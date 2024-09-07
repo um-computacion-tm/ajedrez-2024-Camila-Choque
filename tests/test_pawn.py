@@ -27,7 +27,7 @@ class TestPawn(unittest.TestCase):
     def test_movimientos_basicos_hacia_adelante_no_primer_movimiento(self):  # Peón blanco
         movimientos = [(4, 0)]  # El peón blanco solo avanza una casilla después de su primer movimiento
         resultados = self.__pawn__.movimiento_hacia_adelante(3, 0, es_primer_movimiento=False, color="white")
-        self.assertEqual(resultados, movimientos)
+        self.assertEqual(resultados, movimientos) 
 
     
 

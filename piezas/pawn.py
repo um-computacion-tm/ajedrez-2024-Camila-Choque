@@ -16,7 +16,7 @@ class Pawn(Piece):
         fila_inicial = 6
 
     # Avance de una casilla
-    next_row = row + direction
+    next_row = row + direction 
     if 0 <= next_row <= 7:
         possibles.append((next_row, col))
 
