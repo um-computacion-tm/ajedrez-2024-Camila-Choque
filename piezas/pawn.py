@@ -1,28 +1,32 @@
 from piezas.piece import Piece
 
 
+
 class Pawn(Piece):
     
+  def movimiento_hacia_adelante(self, row, col, es_primer_movimiento, color):
+    possibles = []
 
-    def movimiento_hacia_adelante(self, from_pos, to_pos, direccion, board):
-        from_row, from_col = from_pos
-        to_row, to_col = to_pos
-        pieza_destino = board.get_piece(to_row, to_col)
-        return (from_col == to_col and 
-                to_row == from_row + direccion and 
-                pieza_destino is None)
-    
-    def inicio_doble_(self, from_pos, to_pos, direccion, board):
-        from_row, from_col = from_pos
-        to_row, to_col = to_pos
-        pieza_destino = board.get_piece(to_row, to_col)
-        es_movimiento_valido = (
-            (self.get_color() == "White" and from_row == 6) or 
-            (self.get_color() == "Black" and from_row == 1)
-        )
-        return (es_movimiento_valido and 
-                to_row == from_row + 2 * direccion and 
-                pieza_destino is None and 
-                board.get_piece(from_row + direccion, from_col) is None)
-    
-    
+    # Definir la dirección en función del color
+    if color == 'white':
+        direction = 1  # Los peones blancos avanzan hacia filas mayores
+        fila_inicial = 1
+    else:  # 'negro'
+        direction = -1  # Los peones negros avanzan hacia filas menores
+        fila_inicial = 6
+
+    # Avance de una casilla
+    next_row = row + direction
+    if 0 <= next_row <= 7:
+        possibles.append((next_row, col))
+
+    # Avance de dos casillas si es el primer movimiento
+    if es_primer_movimiento and row == fila_inicial:
+        second_row = row + 2 * direction
+        if 0 <= second_row <= 7:
+            possibles.append((second_row, col))
+
+    return possibles
+
+  
+  

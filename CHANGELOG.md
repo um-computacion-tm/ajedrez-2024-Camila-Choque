@@ -1,3 +1,14 @@
+# [1.1.18] 07-09-2024
+### Agregado 
+
+- Se modifico la funcion del movimiento hacia adelante del peon.
+- Se modifico el dobre salto en el primer movimiento del peon.
+- Se agrego un test que verifica que el peon blanco o negro pueda realizar doble movimiento o  
+  uno solo si es su primer turno.
+- Se agrego un test que verifica el movimiento de solo una casilla del peon blanco.
+- Se agrego un test que verifica el movimiento de solo una casilla del peon negro.
+
+----------------------------------------------------
 # [1.1.17] 06-09-2024
 ### Agregado 
 
