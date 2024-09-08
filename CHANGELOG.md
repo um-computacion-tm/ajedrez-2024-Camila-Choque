@@ -1,3 +1,9 @@
+# [1.1.19] 08-09-2024
+### Agregado 
+
+- Se creo el metodo que le permite al peon capturar de forma diagonal.
+----------------------------------------------------
+
 # [1.1.18] 07-09-2024
 ### Agregado 
 
