@@ -1,3 +1,10 @@
+# [1.1.20] 09-09-2024
+### Agregado 
+- Se creo el test que verifica la captura diagonal.
+- Se creo la clase MockBoard en test_pawn.
+- Se creo la clase MockPiece en test_pawn.
+----------------------------------------------------
+
 # [1.1.19] 08-09-2024
 ### Agregado 
 
