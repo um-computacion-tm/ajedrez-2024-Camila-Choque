@@ -1,3 +1,8 @@
+# [1.1.21] 10-09-2024
+### Agregado 
+- Se agrego una base de la funcion de captura de la torre.
+----------------------------------------------------
+
 # [1.1.20] 09-09-2024
 ### Agregado 
 - Se creo el test que verifica la captura diagonal.
