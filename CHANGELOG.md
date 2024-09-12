@@ -1,3 +1,10 @@
+# [1.1.22] 11-09-2024
+### Agregado 
+- Se realizaron modificaciones en el init de PIECE.
+- Sa agrego la condicion de que la torre no siga avanzando si ve alguna pieza del 
+  mismo color(vertical descendente)
+----------------------------------------------------
+
 # [1.1.21] 10-09-2024
 ### Agregado 
 - Se agrego una base de la funcion de captura de la torre.
