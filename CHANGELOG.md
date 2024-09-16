@@ -1,3 +1,10 @@
+# [1.1.23] 15-09-2024
+### Agregado 
+- Se hicieron pequeños cambios en piece.
+- Se hicieron pequeños cambios en rook.
+- Los arreglos del test_rook estan en procesos. 
+----------------------------------------------------
+
 # [1.1.22] 11-09-2024
 ### Agregado 
 - Se realizaron modificaciones en el init de PIECE.

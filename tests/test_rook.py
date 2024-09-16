@@ -16,7 +16,7 @@ class TestRook(unittest.TestCase):
    
     def test_move_vertical_desc(self):
         movimientos = [(3,4),(4,4),(5,4),(6,4),(7,4)]
-        resultados = self.__rook__.possible_positions_vd(2,4,)
+        resultados = self.__rook__.possible_positions_vd(2,4,self.__board__)
         self.assertEqual(resultados,movimientos)
         
 """""
