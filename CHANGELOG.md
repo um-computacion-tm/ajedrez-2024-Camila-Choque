@@ -1,3 +1,11 @@
+# [1.1.24] 16-09-2024
+### Agregado 
+- Se agregaro un test en test_rook que verifica que la pieza de la torre avance
+- Se agrego otro test en test_rook que verifica que si hay una pieza del mismo color pare.
+- Se arreglaron algunos problemas. 
+----------------------------------------------------
+
+
 # [1.1.23] 15-09-2024
 ### Agregado 
 - Se hicieron pequeños cambios en piece.

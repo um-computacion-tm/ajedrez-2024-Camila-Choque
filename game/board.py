@@ -71,12 +71,7 @@ class Board:
     
 
     def get_piece(self, row, col):
-        if not (
-            0 <= row < 8 or 0 <= col < 8
-        ):
-            raise OutOfBoard()
         return self.__positions__[row][col]
-
     
     def move(self, from_row, from_col, to_row, to_col):
         origin = self.get_piece(from_row, from_col)

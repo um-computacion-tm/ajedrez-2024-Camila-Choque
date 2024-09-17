@@ -6,19 +6,24 @@ class Rook(Piece):
    black_str ="♖"
    white_str ="♜"
 
- 
-   
-   def possible_positions_vd(self, row, col,board):
+   def possible_positions_vd(self, row, col, board):
         possibles = []
         for next_row in range(row + 1, 8):
-            # que la celda que sigue no este ocupada..
             other_piece = board.get_piece(next_row, col)
             if other_piece is not None:
+                # Si hay una pieza y es del mismo color, romper el bucle
+                if other_piece.__color__ == self.__color__:
+                    break
+                # Si hay una pieza y es de un color diferente, agregar el movimiento y romper el bucle
                 if other_piece.__color__ != self.__color__:
                     possibles.append((next_row, col))
                 break
+            # Si no hay una pieza, agregar el movimiento
             possibles.append((next_row, col))
         return possibles
+   
+ 
+
         
 """"
    def possible_positions_va(self, row, col):
