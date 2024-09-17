@@ -17,11 +17,10 @@ class Rook(Piece):
                 # Si hay una pieza y es de un color diferente, agregar el movimiento y romper el bucle
                 if other_piece.__color__ != self.__color__:
                     possibles.append((next_row, col))
-                break
+                    break
             # Si no hay una pieza, agregar el movimiento
             possibles.append((next_row, col))
         return possibles
-   
  
 
         

@@ -1,11 +1,17 @@
+# [1.1.25] 17-09-2024
+### Agregado 
+- Se agrego un test en test_rook que verifica que la pieza torre coma cuando hay una pieza 
+  de otro color.
+- Se trabajo en arreglos.
+----------------------------------------------------
+
+
 # [1.1.24] 16-09-2024
 ### Agregado 
 - Se agregaro un test en test_rook que verifica que la pieza de la torre avance
 - Se agrego otro test en test_rook que verifica que si hay una pieza del mismo color pare.
 - Se arreglaron algunos problemas. 
 ----------------------------------------------------
-
-
 # [1.1.23] 15-09-2024
 ### Agregado 
 - Se hicieron pequeños cambios en piece.

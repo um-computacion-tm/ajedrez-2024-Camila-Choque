@@ -9,12 +9,14 @@ class TestRook(unittest.TestCase):
 
     def setUp(self):
         self.__board__ = Board()
+        self.board = [[None for _ in range(8)] for _ in range(8)]
         self.__rook__ = Rook("WHITE")
         self.__rook__=Rook("BLACK")
+        self.rook_black = Rook("black")
        
 
    
-    def test_move_vertical_desc_sin_otras_piezas(self): #sin otras piezas del mismo color en el camino
+    def test_movimiento_vertical_desc_sin_otras_piezas(self): #sin otras piezas del mismo color en el camino
         board = Board()
         rook = Rook(color='white')
         board.set_piece(2, 4, rook)  
@@ -22,7 +24,7 @@ class TestRook(unittest.TestCase):
         movimientos = rook.possible_positions_vd(2, 4, board)
         resultados = [(3, 4), (4, 4), (5, 4), (6, 4)]
         self.assertEqual(resultados, movimientos)
-    def test_move_vertical_desc_mismo_color(self):
+    def test_movimiento_vertical_desc_mismo_color(self):
         board = Board()
         rook = Rook(color='white')
         board.set_piece(2, 4, rook)
@@ -34,13 +36,27 @@ class TestRook(unittest.TestCase):
         resultados = [(3, 4), (4, 4)]
         self.assertEqual(resultados, movimientos)
 
-   
+    def test_movimiento_vertical_desc_pieza_de_otro_color(self):
+        board = Board()
+        rook = Rook(color='white')
+        board.set_piece(2, 4, rook)
+        # Colocar otra pieza del mismo color en el camino
+        diferent_color_piece = Piece(color='black')
+        board.set_piece(5, 4, diferent_color_piece)
+        # Calcular los movimientos posibles hacia abajo
+        movimientos = rook.possible_positions_vd(2, 4, board)
+        resultados = [(3, 4), (4, 4),(5,4)]
+        self.assertEqual(resultados, movimientos)
+
+    
+
         
 """""
     def test_move_vertical_asc(self):
         movimientos = [(4,4),(3,4),(2,4),(1,4),(0,4)]
         resultados = self.__rook__.possible_positions_va(5,4)
         self.assertEqual(resultados,movimientos)
+
 
     def test_move_horzontal_derecha(self):
         movimientos = [(2,4),(2,5),(2,6),(2,7)]

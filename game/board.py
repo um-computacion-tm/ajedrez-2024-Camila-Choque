@@ -2,7 +2,6 @@ from piezas.rook import Rook
 from piezas.king import King
 from piezas.horse import Horse
 from piezas.pawn import Pawn
-from game.exceptions import OutOfBoard
 
 
 
@@ -34,10 +33,11 @@ class Board:
             self.__positions__[6][col] = Pawn("White")
             self.__positions__[1][col] = Pawn("Black")
 
-
+    def get_piece(self, row, col):
+            return self.__positions__[row][col]
         
         
-        """"
+    """"
         #POSICIONES REINA    
         self.__positions__[0][3] = Queen("BLACK") 
         self.__positions__[7][3] = Queen("WHITE")
@@ -48,7 +48,7 @@ class Board:
         self.__positions__[0][6] = Bishop("BLACK") 
         self.__positions__[7][1] = Bishop("WHITE") 
         self.__positions__[7][6] = Bishop("WHITE") 
-        """
+    """
        
 
 
@@ -70,8 +70,7 @@ class Board:
 
     
 
-    def get_piece(self, row, col):
-        return self.__positions__[row][col]
+
     
     def move(self, from_row, from_col, to_row, to_col):
         origin = self.get_piece(from_row, from_col)
