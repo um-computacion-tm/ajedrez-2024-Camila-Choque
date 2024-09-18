@@ -1,3 +1,16 @@
+# [1.1.26] 18-09-2024
+### Agregado 
+- Se arreglo una funcion que verifica si en el camino de la pieza rook hay compañeros 
+  del mismo color. 
+- Se agregaron cosas en la funcion captura.
+- Se hicieron arreglos en la funcion de movimientos verticales.
+- Se hicieron arreglos en la funcion de movimientos horizontales.
+- Se hizo un test_rook que verifica los movimientos de  una pieza blanca cuando hay un
+  compañero del mismo color. 
+- Se hizo un test_rook que verifica los movimientos de  una pieza negra cuando hay un
+  compañero del mismo color. 
+----------------------------------------------------
+
 # [1.1.25] 17-09-2024
 ### Agregado 
 - Se agrego un test en test_rook que verifica que la pieza torre coma cuando hay una pieza 

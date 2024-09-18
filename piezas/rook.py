@@ -6,90 +6,67 @@ class Rook(Piece):
    black_str ="♖"
    white_str ="♜"
 
-   def possible_positions_vd(self, row, col, board):
-        possibles = []
-        for next_row in range(row + 1, 8):
-            other_piece = board.get_piece(next_row, col)
-            if other_piece is not None:
-                # Si hay una pieza y es del mismo color, romper el bucle
-                if other_piece.__color__ == self.__color__:
-                    break
-                # Si hay una pieza y es de un color diferente, agregar el movimiento y romper el bucle
-                if other_piece.__color__ != self.__color__:
-                    possibles.append((next_row, col))
-                    break
-            # Si no hay una pieza, agregar el movimiento
-            possibles.append((next_row, col))
-        return possibles
+   def pieza_del_mismo_color(self, row, col, board):
+        #Esta funcion sirve para ver si hay otra pieza del mismo color
+        pieza = board[row][col]
+        if pieza is not None and pieza.__color__ == self.__color__:
+            return True
+        else:
+            return False
+        
+   def captura(self, row, col, board):
+        #Verifica si la torre puede capturar 
+        pieza = board[row][col]
+        if pieza is not None and pieza.__color__ != self.__color__:
+            return True
+        else:
+            return False
+
  
 
-        
-""""
-   def possible_positions_va(self, row, col):
+   def posiciones_verticales(self, row, col,board):
+        # Verifica los movimientos verticales ascendentes(profe)
         possibles = []
         for next_row in range(row -1, -1, -1): 
+            if self.pieza_del_mismo_color(next_row,col,board):
+                break
+            if self.captura(next_row,col,board):
+               possibles.append((next_row, col))
+               break
             possibles.append((next_row, col))
-        return possibles    
-   
 
-   def possible_positions_derecha(self, row, col):
-    possibles = []
-    for next_col in range(col + 1, 8):  
-        possibles.append((row, next_col))
-    return possibles
-   
-   def possible_positions_izquierda(self, row, col):
-    possibles = []
-    for next_col in range(col - 1, -1, -1):  
-        possibles.append((row, next_col))
-    return possibles
-
-    #ARREGLARRRRRRRRRRRRRR
-   def captura(self, row, col, board):
-        captures = []
-        
-        # Verificar en vertical hacia abajo
+        # Verifica los movimientos verticales descendentes(profe)
         for next_row in range(row + 1, 8):
-            piece = board.get_piece_at((next_row, col))
-            if piece is None:
-                continue
-            if piece.color != self.color:
-                captures.append((next_row, col))
-                break  
-            else:
-                break  
+            if self.pieza_del_mismo_color(next_row, col,board):
+                break
+            if self.captura(next_row,col,board):
+                    possibles.append((next_row, col))
+                    break
+            possibles.append((next_row, col))
+        return possibles
+       
+   def posiciones_horizontales(self, row, col,board):
+    #Verifica los movimientos a izquierda de la torre
+        possibles = []
+        for next_col in range(col - 1, -1, -1):  
+            if self.pieza_del_mismo_color((row, next_col,board)):
+                break
+            if self.captura(row,next_col,board):
+                possibles.append((row,next_col))
+                break
+            possibles.append((row,next_col))
+
+    #Verifica los movimientos a derecha de la torre
+        for next_col in range(col + 1, 8):  
+            if self.pieza_del_mismo_color((row, next_col,board)):
+                break
+            if self.captura(row,next_col,board):
+                possibles.append((row,next_col))
+                break
+            possibles.append((row,next_col))
         
-        # Verificar en vertical hacia arriba
-        for next_row in range(row - 1, -1, -1):
-            piece = board.get_piece_at((next_row, col))
-            if piece is None:
-                continue
-            if piece.color != self.color:
-                captures.append((next_row, col))
-                break 
-            else:
-                break  
-        
-        # Verificar hacia la derecha
-        for next_col in range(col + 1, 8):
-            piece = board.get_piece_at((row, next_col))
-            if piece is None:
-                continue
-            if piece.color != self.color:
-                captures.append((row, next_col))
-                break 
-            else:
-                break  #
-        
-        # Verificar hacia la izquierda
-        for next_col in range(col - 1, -1, -1):
-            piece = board.get_piece_at((row, next_col))
-            if piece is None:
-                continue
-            if piece.color != self.color:
-                captures.append((row, next_col))
-                break  
-            else:
-                break  
-        return captures
-    """
+        return possibles
+   
+       
+
+

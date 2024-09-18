@@ -10,65 +10,28 @@ class TestRook(unittest.TestCase):
     def setUp(self):
         self.__board__ = Board()
         self.board = [[None for _ in range(8)] for _ in range(8)]
-        self.__rook__ = Rook("WHITE")
-        self.__rook__=Rook("BLACK")
-        self.rook_black = Rook("black")
+        self.__rb__ = Rook("black")
+        self.__rw__= Rook("white")
        
 
    
-    def test_movimiento_vertical_desc_sin_otras_piezas(self): #sin otras piezas del mismo color en el camino
-        board = Board()
-        rook = Rook(color='white')
-        board.set_piece(2, 4, rook)  
-        # Supongamos que no hay otras piezas en el camino
-        movimientos = rook.possible_positions_vd(2, 4, board)
-        resultados = [(3, 4), (4, 4), (5, 4), (6, 4)]
-        self.assertEqual(resultados, movimientos)
-    def test_movimiento_vertical_desc_mismo_color(self):
-        board = Board()
-        rook = Rook(color='white')
-        board.set_piece(2, 4, rook)
-        # Colocar otra pieza del mismo color en el camino
-        same_color_piece = Piece(color='white')
-        board.set_piece(5, 4, same_color_piece)
-        # Calcular los movimientos posibles hacia abajo
-        movimientos = rook.possible_positions_vd(2, 4, board)
-        resultados = [(3, 4), (4, 4)]
-        self.assertEqual(resultados, movimientos)
+    def test_movimientos_verticales_con_compañeros_en_el_camino(self): #BLANCAS
+        self.board[4][1] = self.__rw__
+        self.board[2][1] = Piece("white")  
+        self.board[6][1] = Piece("white")
+        resultados= [(3, 1), (5, 1)]
+        self.assertEqual(self.__rw__.posiciones_verticales(4, 1, self.board), resultados)
 
-    def test_movimiento_vertical_desc_pieza_de_otro_color(self):
-        board = Board()
-        rook = Rook(color='white')
-        board.set_piece(2, 4, rook)
-        # Colocar otra pieza del mismo color en el camino
-        diferent_color_piece = Piece(color='black')
-        board.set_piece(5, 4, diferent_color_piece)
-        # Calcular los movimientos posibles hacia abajo
-        movimientos = rook.possible_positions_vd(2, 4, board)
-        resultados = [(3, 4), (4, 4),(5,4)]
-        self.assertEqual(resultados, movimientos)
+    def test_movimientos_verticales_con_compañeros_en_el_camino(self): #NEGRAS
+        self.board[4][3] = self.__rb__
+        self.board[2][3] = Piece("black")  
+        self.board[6][3] = Piece("black")
+        resultados= [(3, 3), (5, 3)]
+        self.assertEqual(self.__rb__.posiciones_verticales(4, 3, self.board), resultados)
 
     
 
         
-"""""
-    def test_move_vertical_asc(self):
-        movimientos = [(4,4),(3,4),(2,4),(1,4),(0,4)]
-        resultados = self.__rook__.possible_positions_va(5,4)
-        self.assertEqual(resultados,movimientos)
-
-
-    def test_move_horzontal_derecha(self):
-        movimientos = [(2,4),(2,5),(2,6),(2,7)]
-        resultados = self.__rook__.possible_positions_derecha(2,3)
-        self.assertEqual(resultados,movimientos)
-
-    def test_move_horizontal_izquierda(self):
-        movimientos = [(2,2),(2,1),(2,0)]
-        resultados = self.__rook__.possible_positions_izquierda(2,3)
-        self.assertEqual(resultados,movimientos)
-
-"""""
 
 
 if __name__ == '__main__':
