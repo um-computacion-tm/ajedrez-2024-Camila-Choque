@@ -1,6 +1,74 @@
+# [1.1.27] 19-09-2024
+### Agregado 
+- Se agrego un test_rook que verifica los movimientos horizontales cuando hay compañeros del mismo
+  color en el camino.
+- Se agrego un test_rook que verifica los movimientos verticales cuando hay compañeros del mismo
+  color en el camino.
+- Se hicieron cambios en el init de rook.
+- Se agrego un "possibles.sort()" que ordena las posiciones para asegurar el orden correcto.
+----------------------------------------------------
+
+
+# [1.1.26] 18-09-2024
+### Agregado 
+- Se arreglo una funcion que verifica si en el camino de la pieza rook hay compañeros 
+  del mismo color. 
+- Se agregaron cosas en la funcion captura.
+- Se hicieron arreglos en la funcion de movimientos verticales.
+- Se hicieron arreglos en la funcion de movimientos horizontales.
+- Se hizo un test_rook que verifica los movimientos de  una pieza blanca cuando hay un
+  compañero del mismo color. 
+- Se hizo un test_rook que verifica los movimientos de  una pieza negra cuando hay un
+  compañero del mismo color. 
+----------------------------------------------------
+
+# [1.1.25] 17-09-2024
+### Agregado 
+- Se agrego un test en test_rook que verifica que la pieza torre coma cuando hay una pieza 
+  de otro color.
+- Se trabajo en arreglos.
+----------------------------------------------------
+
+
+# [1.1.24] 16-09-2024
+### Agregado 
+- Se agregaro un test en test_rook que verifica que la pieza de la torre avance
+- Se agrego otro test en test_rook que verifica que si hay una pieza del mismo color pare.
+- Se arreglaron algunos problemas. 
+----------------------------------------------------
+# [1.1.23] 15-09-2024
+### Agregado 
+- Se hicieron pequeños cambios en piece.
+- Se hicieron pequeños cambios en rook.
+- Los arreglos del test_rook estan en procesos. 
+----------------------------------------------------
+
+# [1.1.22] 11-09-2024
+### Agregado 
+- Se realizaron modificaciones en el init de PIECE.
+- Sa agrego la condicion de que la torre no siga avanzando si ve alguna pieza del 
+  mismo color(vertical descendente)
+----------------------------------------------------
+
+# [1.1.21] 10-09-2024
+### Agregado 
+- Se agrego una base de la funcion de captura de la torre.
+----------------------------------------------------
+
+# [1.1.20] 09-09-2024
+### Agregado 
+- Se creo el test que verifica la captura diagonal.
+- Se creo la clase MockBoard en test_pawn.
+- Se creo la clase MockPiece en test_pawn.
+----------------------------------------------------
+
+# [1.1.19] 08-09-2024
+### Agregado 
+- Se creo el metodo que le permite al peon capturar de forma diagonal.
+----------------------------------------------------
+
 # [1.1.18] 07-09-2024
 ### Agregado 
-
 - Se modifico la funcion del movimiento hacia adelante del peon.
 - Se modifico el dobre salto en el primer movimiento del peon.
 - Se agrego un test que verifica que el peon blanco o negro pueda realizar doble movimiento o  
@@ -11,7 +79,6 @@
 ----------------------------------------------------
 # [1.1.17] 06-09-2024
 ### Agregado 
-
 - Se agrego la funcion que realiza el doble salto del peon.
 ----------------------------------------------------
 
