@@ -29,10 +29,27 @@ class TestRook(unittest.TestCase):
         resultados= [(3, 3), (5, 3)]
         self.assertEqual(self.__rb__.posiciones_verticales(4, 3, self.board), resultados)
 
-    
+    def test_movimientos_horizontales_con_compañeros_en_el_camino(self): #BLANCAS
+        self.board[4][3] = self.__rw__
+        self.board[4][1] = Piece("white")  
+        self.board[4][5] = Piece("white")
+        resultados= [(4, 2), (4, 4)]
+        self.assertEqual(self.__rw__.posiciones_horizontales(4, 3, self.board), resultados)
 
+    def test_movimientos_horizontales(self):  #BLANCAS
+        self.board[4][3] = self.__rw__
+        movimientos = [(4,0),(4,1),(4,2),(4,4),(4,5),(4,6),(4,7)]
+        self.assertEqual(self.__rw__.posiciones_horizontales(4, 3, self.board), movimientos)
+
+    def test_movimientos_verticales(self):  #BLANCAS
+        self.board[4][3] = self.__rw__
+        movimientos = [(0,3),(1,3),(2,3),(3,3),(5,3),(6,3),(7,3)]
+        self.assertEqual(self.__rw__.posiciones_verticales(4, 3, self.board), movimientos)
         
-
+    
+        
+    
+    
 
 if __name__ == '__main__':
     unittest.main()

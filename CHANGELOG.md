@@ -1,3 +1,14 @@
+# [1.1.27] 19-09-2024
+### Agregado 
+- Se agrego un test_rook que verifica los movimientos horizontales cuando hay compañeros del mismo
+  color en el camino.
+- Se agrego un test_rook que verifica los movimientos verticales cuando hay compañeros del mismo
+  color en el camino.
+- Se hicieron cambios en el init de rook.
+- Se agrego un "possibles.sort()" que ordena las posiciones para asegurar el orden correcto.
+----------------------------------------------------
+
+
 # [1.1.26] 18-09-2024
 ### Agregado 
 - Se arreglo una funcion que verifica si en el camino de la pieza rook hay compañeros 
@@ -53,13 +64,11 @@
 
 # [1.1.19] 08-09-2024
 ### Agregado 
-
 - Se creo el metodo que le permite al peon capturar de forma diagonal.
 ----------------------------------------------------
 
 # [1.1.18] 07-09-2024
 ### Agregado 
-
 - Se modifico la funcion del movimiento hacia adelante del peon.
 - Se modifico el dobre salto en el primer movimiento del peon.
 - Se agrego un test que verifica que el peon blanco o negro pueda realizar doble movimiento o  
@@ -70,7 +79,6 @@
 ----------------------------------------------------
 # [1.1.17] 06-09-2024
 ### Agregado 
-
 - Se agrego la funcion que realiza el doble salto del peon.
 ----------------------------------------------------
 
