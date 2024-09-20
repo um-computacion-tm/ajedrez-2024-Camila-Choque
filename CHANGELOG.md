@@ -1,3 +1,13 @@
+# [1.1.28] 20-09-2024
+### Agregado 
+- Se modificaron algunos detalles en los test_rook.
+- Se modificaron algunos detalles del init de board.
+- Se agrego el test que verifica la captura horizontal.
+- Se agrego el test que verifica la captura vertical.
+- Se agrego un test que verifica la captura horizontal cuando hay un compañero en el camino.
+- Se agrego un test que verifica la captura vertical cuando hay un compañero en el camino.
+----------------------------------------------------
+
 # [1.1.27] 19-09-2024
 ### Agregado 
 - Se agrego un test_rook que verifica los movimientos horizontales cuando hay compañeros del mismo
