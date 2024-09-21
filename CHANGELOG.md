@@ -1,3 +1,13 @@
+# [1.1.29] 21-09-2024
+### Agregado 
+- Se modifico la funcion que valida los mivimiento del caballo.
+-  Se arreglo una funcion que verifica si en el camino de la pieza horse hay compañeros 
+   del mismo color. 
+- Se agrego una funcion que verifica la captura del caballo.
+- Se modifico el test que verifica el movimiento del caballo.
+- Se modifico el setup de test_horse.
+----------------------------------------------------
+
 # [1.1.28] 20-09-2024
 ### Agregado 
 - Se modificaron algunos detalles en los test_rook.

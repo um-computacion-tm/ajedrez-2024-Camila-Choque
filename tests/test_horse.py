@@ -1,13 +1,26 @@
 import unittest
 from piezas.horse import Horse
+from game.board import Board
 
 
 
 class TestHorse(unittest.TestCase):
     def setUp(self):
         
-        self.horse = Horse("BLACK")
+        self.__hw__ = Horse("WHITE")  
+        self.__hb__ = Horse("BLACK")  
+        self.board = Board(for_test=True) 
+
+    def test_movimientos_caballo(self):  #CABALLOS BALNCOS
+        self.board.set_piece(4,3 ,self.__hw__)
+        movimientos = [(6, 4),(6, 2),(2, 4),(2, 2),(5, 5), (5, 1),(3, 5),(3, 1)]
+        resultados = self.__hw__.horse_moves(4, 3, self.board)
+        self.assertEqual(resultados, movimientos)
+
      
+
+
+"""""
     def test_horse_moves_44(self):  #LA PISCION ES (4,4)
         resultado_posicion_central = [(6,5),(6,3),(2,5),(2,3),(5,6),(5,2),(3,6),(3,2)]
         resultado = self.horse.horse_moves(4, 4)
@@ -29,7 +42,7 @@ class TestHorse(unittest.TestCase):
         self.assertEqual(resultado,resultado_posicion)
         
    ##ESTA AHI FUNCIONA 
-
+"""""
 
     
 
