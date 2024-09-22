@@ -1,3 +1,13 @@
+# [1.1.30] 22-09-2024
+### Agregado 
+- Se agrego un test que verifica los movimeintos del caballo cuando hay compañeros del 
+  mismo color en el camino.
+- Se realizo un test que verifica las capturas que puede realizar el caballo.
+- Se realizo un test que verifica las capturas mal realizadas del caballo.
+- Se agrego en el peon la funcion que verifica si una pieza es compañero.
+- Se agrego en el peon la funcion que verifica la captura.
+----------------------------------------------------
+
 # [1.1.29] 21-09-2024
 ### Agregado 
 - Se modifico la funcion que valida los mivimiento del caballo.

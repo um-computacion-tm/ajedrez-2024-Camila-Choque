@@ -3,6 +3,22 @@ from piezas.piece import Piece
 
 
 class Pawn(Piece):
+  
+  def pieza_del_mismo_color(self, row, col, board):
+        #Esta funcion sirve para ver si hay otra pieza del mismo color
+        pieza = board.get_piece(row,col)
+        if pieza is not None and pieza.__color__ == self.__color__:
+            return True
+        else:
+            return False
+        
+  def captura(self, row, col, board):
+        #Verifica si la torre puede capturar 
+        pieza = board.get_piece(row,col)
+        if pieza is not None and pieza.__color__ != self.__color__:
+            return True
+        else:
+            return False
     
   def movimiento_hacia_adelante(self, row, col, es_primer_movimiento, color, board):
     possibles = []
