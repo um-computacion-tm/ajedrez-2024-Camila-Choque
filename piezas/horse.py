@@ -15,7 +15,7 @@ class Horse(Piece):
             return False
         
     def captura(self, row, col, board):
-        #Verifica si la torre puede capturar 
+        #Verifica si puede capturar 
         pieza = board.get_piece(row,col)
         if pieza is not None and pieza.__color__ != self.__color__:
             return True

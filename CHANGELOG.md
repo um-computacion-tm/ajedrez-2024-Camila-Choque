@@ -1,3 +1,17 @@
+# [1.1.31] 23-09-2024
+### Agregado 
+- Se hicieron pequeños cambios en la funcion que valida el movimiento del peon.
+- Se hizo un test que valida el primer movimiento del peon ya sea simple o doble.
+- Se hizo un test que valida el movimiento del peon con compañeros en el camino.
+- Se hizo un test que verifica la captura realizada por el peon.
+- Se hizo un test que verifica un movimiento en donde puede realizar un salto doble o capturar.
+- Se realizo una funcion en bishop(alfil) que verifica si una pieza es del mismo color.
+- Se realizo una funcion en bishop que verifica la captura.
+- Se realizo una funcion en bishop que verifica los movimientos en diagonal.
+- Se realizaron los test que verifica los movimientos diagonales, las capturas diagonales y 
+  si en el camino hay compañeros del mismo color.
+- Se agregaron las coordenadas de los alfiles en board.
+----------------------------------------------------
 # [1.1.30] 22-09-2024
 ### Agregado 
 - Se agrego un test que verifica los movimeintos del caballo cuando hay compañeros del 
