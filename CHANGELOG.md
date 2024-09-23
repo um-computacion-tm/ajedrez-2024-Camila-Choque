@@ -1,3 +1,47 @@
+# [1.1.31] 23-09-2024
+### Agregado 
+- Se hicieron pequeños cambios en la funcion que valida el movimiento del peon.
+- Se hizo un test que valida el primer movimiento del peon ya sea simple o doble.
+- Se hizo un test que valida el movimiento del peon con compañeros en el camino.
+- Se hizo un test que verifica la captura realizada por el peon.
+- Se hizo un test que verifica un movimiento en donde puede realizar un salto doble o capturar.
+- Se realizo una funcion en bishop(alfil) que verifica si una pieza es del mismo color.
+- Se realizo una funcion en bishop que verifica la captura.
+- Se realizo una funcion en bishop que verifica los movimientos en diagonal.
+- Se realizaron los test que verifica los movimientos diagonales, las capturas diagonales y 
+  si en el camino hay compañeros del mismo color.
+- Se agregaron las coordenadas de los alfiles en board.
+----------------------------------------------------
+# [1.1.30] 22-09-2024
+### Agregado 
+- Se agrego un test que verifica los movimeintos del caballo cuando hay compañeros del 
+  mismo color en el camino.
+- Se realizo un test que verifica las capturas que puede realizar el caballo.
+- Se realizo un test que verifica las capturas mal realizadas del caballo.
+- Se agrego en el peon la funcion que verifica si una pieza es compañero.
+- Se agrego en el peon la funcion que verifica la captura.
+----------------------------------------------------
+
+# [1.1.29] 21-09-2024
+### Agregado 
+- Se modifico la funcion que valida los mivimiento del caballo.
+-  Se arreglo una funcion que verifica si en el camino de la pieza horse hay compañeros 
+   del mismo color. 
+- Se agrego una funcion que verifica la captura del caballo.
+- Se modifico el test que verifica el movimiento del caballo.
+- Se modifico el setup de test_horse.
+----------------------------------------------------
+
+# [1.1.28] 20-09-2024
+### Agregado 
+- Se modificaron algunos detalles en los test_rook.
+- Se modificaron algunos detalles del init de board.
+- Se agrego el test que verifica la captura horizontal.
+- Se agrego el test que verifica la captura vertical.
+- Se agrego un test que verifica la captura horizontal cuando hay un compañero en el camino.
+- Se agrego un test que verifica la captura vertical cuando hay un compañero en el camino.
+----------------------------------------------------
+
 # [1.1.27] 19-09-2024
 ### Agregado 
 - Se agrego un test_rook que verifica los movimientos horizontales cuando hay compañeros del mismo

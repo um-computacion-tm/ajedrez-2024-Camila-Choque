@@ -2,36 +2,48 @@ from piezas.rook import Rook
 from piezas.king import King
 from piezas.horse import Horse
 from piezas.pawn import Pawn
+from piezas.bishop import Bishop
 
 
 
 
 class Board:
-    def __init__(self):
+    def __init__(self, for_test = False):
         self.__positions__ = []
         for _ in range(8):
             col = []
             for _ in range(8):
                 col.append(None)
             self.__positions__.append(col)
-        #POSICIONES TORRES
-        self.__positions__[0][0] = Rook("BLACK") # Black
-        self.__positions__[0][7] = Rook("BLACK") # Black
-        self.__positions__[7][7] = Rook("WHITE") # White
-        self.__positions__[7][0] = Rook("WHITE") # White
-        #PISICIONES REY
-        self.__positions__[0][4] = King("BLACK") 
-        self.__positions__[7][4] = King("WHITE") 
+        if not for_test:
 
-        self.__positions__[0][1] = Horse("BLACK") 
-        self.__positions__[0][6] = Horse("BLACK") 
-        self.__positions__[7][1] = Horse("WHITE") 
-        self.__positions__[7][6] = Horse("WHITE") 
+
+        #POSICIONES TORRES
+            self.__positions__[0][0] = Rook("BLACK") # Black
+            self.__positions__[0][7] = Rook("BLACK") # Black
+            self.__positions__[7][7] = Rook("WHITE") # White
+            self.__positions__[7][0] = Rook("WHITE") # White
+        #PISICIONES REY
+            self.__positions__[0][4] = King("BLACK") 
+            self.__positions__[7][4] = King("WHITE") 
+
+            self.__positions__[0][1] = Horse("BLACK") 
+            self.__positions__[0][6] = Horse("BLACK") 
+            self.__positions__[7][1] = Horse("WHITE") 
+            self.__positions__[7][6] = Horse("WHITE") 
+
+            #PISICION ALFIL
+            self.__positions__[0][2] = Bishop("BLACK") 
+            self.__positions__[0][5] = Bishop("BLACK") 
+            self.__positions__[7][2] = Bishop("WHITE") 
+            self.__positions__[7][5] = Bishop("WHITE") 
 
         #POSICIONES PEONES
-        for col in range(8):
-            self.__positions__[6][col] = Pawn("White")
-            self.__positions__[1][col] = Pawn("Black")
+            for col in range(8):
+                self.__positions__[6][col] = Pawn("White")
+                self.__positions__[1][col] = Pawn("Black")
+
+        
 
     def get_piece(self, row, col):
             return self.__positions__[row][col]
@@ -43,11 +55,7 @@ class Board:
         self.__positions__[7][3] = Queen("WHITE")
         
     
-        #PISICION ALFIL
-        self.__positions__[0][1] = Bishop("BLACK") 
-        self.__positions__[0][6] = Bishop("BLACK") 
-        self.__positions__[7][1] = Bishop("WHITE") 
-        self.__positions__[7][6] = Bishop("WHITE") 
+        
     """
        
 

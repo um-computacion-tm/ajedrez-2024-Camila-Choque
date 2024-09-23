@@ -11,7 +11,7 @@ class Rook(Piece):
 
    def pieza_del_mismo_color(self, row, col, board):
         #Esta funcion sirve para ver si hay otra pieza del mismo color
-        pieza = board[row][col]
+        pieza = board.get_piece(row,col)
         if pieza is not None and pieza.__color__ == self.__color__:
             return True
         else:
@@ -19,7 +19,7 @@ class Rook(Piece):
         
    def captura(self, row, col, board):
         #Verifica si la torre puede capturar 
-        pieza = board[row][col]
+        pieza = board.get_piece(row,col)
         if pieza is not None and pieza.__color__ != self.__color__:
             return True
         else:
