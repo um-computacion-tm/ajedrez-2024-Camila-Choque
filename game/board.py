@@ -3,7 +3,7 @@ from piezas.king import King
 from piezas.horse import Horse
 from piezas.pawn import Pawn
 from piezas.bishop import Bishop
-
+from piezas.queen import Queen
 
 
 
@@ -38,6 +38,10 @@ class Board:
             self.__positions__[7][2] = Bishop("WHITE") 
             self.__positions__[7][5] = Bishop("WHITE") 
 
+            #POSICIONES REINA    
+            self.__positions__[0][3] = Queen("BLACK") 
+            self.__positions__[7][3] = Queen("WHITE")
+
         #POSICIONES PEONES
             for col in range(8):
                 self.__positions__[6][col] = Pawn("White")
@@ -47,17 +51,7 @@ class Board:
 
     def get_piece(self, row, col):
             return self.__positions__[row][col]
-        
-        
-    """"
-        #POSICIONES REINA    
-        self.__positions__[0][3] = Queen("BLACK") 
-        self.__positions__[7][3] = Queen("WHITE")
-        
     
-        
-    """
-       
 
 
 

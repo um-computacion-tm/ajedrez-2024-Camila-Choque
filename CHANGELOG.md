@@ -1,3 +1,12 @@
+# [1.1.32] 24-09-2024
+### Agregado 
+- Se agrego la funcion que valida los movimientos de la reina reciclando los movimientos
+  de la torre y el alfil.
+- Se creo todos los test necesarios de la reina.
+- Se agrego la funcion que valida los movimeintos del rey.
+- Se realizaron todos los test que verifican los movimientos del rey.
+----------------------------------------------------
+
 # [1.1.31] 23-09-2024
 ### Agregado 
 - Se hicieron pequeños cambios en la funcion que valida el movimiento del peon.
