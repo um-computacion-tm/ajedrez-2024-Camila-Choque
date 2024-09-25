@@ -1,3 +1,4 @@
+
 import unittest
 from game.board import Board
 from piezas.queen import Queen
@@ -38,6 +39,5 @@ class TestPawn(unittest.TestCase):
         movimientos = [(5,2),(5,3),(5,4),(6,0),(6,1),(6,2),(6,4),(6,5),(6,6),(6,7),(7,3),(7,2),(7,4)]
         resultado = self.__qw__.movimiento(6, 3, self.board)
         self.assertEqual(sorted(resultado),sorted(movimientos))
-
 
     

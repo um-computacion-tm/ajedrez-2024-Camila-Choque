@@ -1,8 +1,12 @@
 from piezas.piece import Piece
 
 class Bishop(Piece):
+   black_str ="♗"
+   white_str ="♝"
    def __init__(self, color):
         super().__init__(color)
+        
+        
 
    def pieza_del_mismo_color(self, row, col, board):
         #Esta funcion sirve para ver si hay otra pieza del mismo color
@@ -19,7 +23,8 @@ class Bishop(Piece):
             return True
         else:
             return False
-        
+
+     #VERIFICA LOS MOVIMIENTOS DIAGONALES   
    def movimiento(self, row, col, board):
         possibles = []
 

@@ -1,3 +1,12 @@
+# [1.1.33] 25-09-2024
+### Agregado 
+- Se movio la funcion que verifica los movimeitnos verticales y horizonrales a piece.
+- Se modificaron los test de rook.
+- La funcion que verifica la captura y si una pieza es del mismo color se movio a piece.
+- Se agrego en board una funcion que ve si los movimientos son validos.
+- Se agregaron los test que verifican las funciones de board.
+- Se agregaron funciones en board.
+----------------------------------------------------
 # [1.1.32] 24-09-2024
 ### Agregado 
 - Se agrego la funcion que valida los movimientos de la reina reciclando los movimientos

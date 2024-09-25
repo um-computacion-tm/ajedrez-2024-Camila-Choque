@@ -4,6 +4,9 @@ from piezas.bishop import Bishop
 
 
 class Queen(Piece):
+ 
+ black_str ="♕"
+ white_str ="♛"
 
  def __init__(self,color):
   self.__bishop__ = Bishop(color)
@@ -17,7 +20,6 @@ class Queen(Piece):
     possibles += self.__bishop__.movimiento(row, col, board)
 
     # Movimientos verticales y horizontales (Torre)
-    possibles += self.__rook__.posiciones_verticales(row, col, board)
-    possibles += self.__rook__.posiciones_horizontales(row, col, board)
-
+    possibles += self.__rook__.movimientos_horizontales_y_verticales(row, col, board)
+    
     return possibles

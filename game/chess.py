@@ -20,5 +20,5 @@ class Chess():
         else:
             self.__turn__ = "WHITE"
 
-    def show_board(self): #muestra el tablero de forma actualizada 
+    def show_board(self): #Muestra el tablero de forma actualizada 
         pass

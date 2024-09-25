@@ -12,7 +12,7 @@ class TestHorse(unittest.TestCase):
     def test_movimientos(self):  #REY BLANCO
         self.board.set_piece(7,4 ,self.__kw__)
         movimientos = [(6,3),(6,4),(6,5),(7,3),(7,5)]
-        resultado = self.__kw__.valid_move_king(7, 4, self.board)
+        resultado = self.__kw__.movimientos_rey(7, 4, self.board)
         self.assertEqual(sorted(resultado),sorted(movimientos))
 
     def test_captura(self):  #REY BLANCO
@@ -23,7 +23,7 @@ class TestHorse(unittest.TestCase):
         self.board.set_piece(7,3, Piece("BLACK"))  
         self.board.set_piece(7,5 , Piece("BLACK"))  
         movimientos = [(6,3),(6,4),(6,5),(7,3),(7,5)]
-        resultado = self.__kw__.valid_move_king(7, 4, self.board)
+        resultado = self.__kw__.movimientos_rey(7, 4, self.board)
         self.assertEqual(sorted(resultado),sorted(movimientos))
 
     def test_movimientos_con_compañeros(self):  #REY BLANCO
@@ -33,7 +33,7 @@ class TestHorse(unittest.TestCase):
         self.board.set_piece(6,3 , Piece("WHITE"))  
         self.board.set_piece(7,3 , Piece("WHITE"))  
         movimientos = [(7,1)]
-        resultado = self.__kw__.valid_move_king(7, 2, self.board)
+        resultado = self.__kw__.movimientos_rey(7, 2, self.board)
         self.assertEqual(sorted(resultado),sorted(movimientos))
 
     
