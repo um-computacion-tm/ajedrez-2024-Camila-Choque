@@ -4,9 +4,9 @@ from piezas.bishop import Bishop
 
 
 class Queen(Piece):
+ black_str ="♛"
+ white_str ="♕"
  
- black_str ="♕"
- white_str ="♛"
 
  def __init__(self,color):
   self.__bishop__ = Bishop(color)

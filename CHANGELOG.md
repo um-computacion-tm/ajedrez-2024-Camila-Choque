@@ -1,3 +1,10 @@
+# [1.1.34] 26-09-2024
+### Agregado 
+- Se hicieron cambios en board.
+- Se hicieron cambios en test_board.
+- Se agregaron funciones en chess.
+- Se hicieron los test de chess.
+----------------------------------------------------
 # [1.1.33] 25-09-2024
 ### Agregado 
 - Se movio la funcion que verifica los movimeitnos verticales y horizonrales a piece.

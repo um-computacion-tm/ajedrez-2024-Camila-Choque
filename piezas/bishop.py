@@ -1,8 +1,8 @@
 from piezas.piece import Piece
 
 class Bishop(Piece):
-   black_str ="♗"
-   white_str ="♝"
+   white_str = "♗"
+   black_str = "♝"
    def __init__(self, color):
         super().__init__(color)
         

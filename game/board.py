@@ -8,13 +8,10 @@ from game.exceptions import OutOfBoard
 
 
 class Board:
-    def __init__(self, for_test = False):
+    def __init__(self, for_test=False):
         self.__positions__ = []
         for _ in range(8):
-            col = []
-            for _ in range(8):
-                col.append(None)
-            self.__positions__.append(col)
+            self.__positions__.append([None] * 8)
         if not for_test:
             #POSICIONES TORRES
             self.__positions__[0][0] = Rook("BLACK") # Black
@@ -39,8 +36,8 @@ class Board:
             self.__positions__[7][3] = Queen("WHITE")
             #POSICIONES PEONES
             for col in range(8):
-                self.__positions__[6][col] = Pawn("White")
-                self.__positions__[1][col] = Pawn("Black")
+                self.__positions__[1][col] = Pawn("BLACK")
+                self.__positions__[6][col] = Pawn("WHITE")
 
 
         
@@ -49,19 +46,21 @@ class Board:
         if 0 <= row < 8 and 0 <= col < 8:
             return self.__positions__[row][col]
         else:
-            raise OutOfBoard("Coordinates out of range")
+            raise OutOfBoard("Fuera de Rango")
 
 
 
     def __str__(self):
-        board_str = ""
-        for row in self.__positions__:
+        board_str = "  0 1 2 3 4 5 6 7\n"  
+        for i, row in enumerate(self.__positions__):
+            board_str += str(i) + " "  
             for cell in row:
                 if cell is not None:
-                    board_str += str(cell)
+                    board_str += str(cell) + " "  
                 else:
-                    board_str += " "
-            board_str += "\n"
+                    board_str += ". "  
+            board_str += str(i) + "\n"  
+        board_str += "  0 1 2 3 4 5 6 7\n"  
         return board_str
     
  

@@ -14,35 +14,16 @@ class TestBoard(unittest.TestCase):
     def setUp(self):
         self.board = Board()
 
-    
-    """
-    def test_str_board(self):
-        board = Board()
-        self.assertEqual(
-            str(board),
-            (
-                "♖ ♘ ♗ ♕ ♔ ♗ ♘ ♖ \n"
-                "♙ ♙ ♙ ♙ ♙ ♙ ♙ ♙ \n"
-                "                \n"
-                "                \n"
-                "                \n"
-                "                \n"
-                "♟ ♟ ♟ ♟ ♟ ♟ ♟ ♟ \n"
-                "♜ ♞ ♝ ♛ ♚ ♝ ♞ ♜ \n"
-            )
-        )
-
-
     def test_move(self):
         board = Board(for_test=True)
-        rook = Rook(color='black')
+        rook = Rook(color='BLACK')
         board.set_piece(0, 0, rook)
 
         board.move(
-            from_row=0,
-            from_col=0,
-            to_row=0,
-            to_col=1,
+                from_row=0,
+                from_col=0,
+                to_row=0,
+                to_col=1,
         )
 
         self.assertIsInstance(
@@ -50,19 +31,22 @@ class TestBoard(unittest.TestCase):
             Rook,
         )
         self.assertEqual(
-            str(board),
-            (
-                " ♖      \n"
-                "        \n"
-                "        \n"
-                "        \n"
-                "        \n"
-                "        \n"
-                "        \n"
-                "        \n"
-            )
+        str(board),
+        (
+            "  0 1 2 3 4 5 6 7\n"
+            "0 . ♜ . . . . . . 0\n"
+            "1 . . . . . . . . 1\n"
+            "2 . . . . . . . . 2\n"
+            "3 . . . . . . . . 3\n"
+            "4 . . . . . . . . 4\n"
+            "5 . . . . . . . . 5\n"
+            "6 . . . . . . . . 6\n"
+            "7 . . . . . . . . 7\n"
+            "  0 1 2 3 4 5 6 7\n"
         )
-     """
+    )
+
+
     def test_get_piece_out_of_range(self):
         board = Board(for_test=True)
 
@@ -126,9 +110,24 @@ class TestBoard(unittest.TestCase):
 
         # Verificar que los movimientos válidos sean los esperados
         self.assertEqual(sorted(movimientos), sorted(esperado))
-        self.assertEqual(sorted(movimientos), sorted(esperado))
+       
 
+    def test_str_representation(self):
+        expected_str = (
+            "  0 1 2 3 4 5 6 7\n"
+            "0 ♜ ♞ ♝ ♛ ♚ ♝ ♞ ♜ 0\n"
+            "1 ♟ ♟ ♟ ♟ ♟ ♟ ♟ ♟ 1\n"
+            "2 . . . . . . . . 2\n"
+            "3 . . . . . . . . 3\n"
+            "4 . . . . . . . . 4\n"
+            "5 . . . . . . . . 5\n"
+            "6 ♙ ♙ ♙ ♙ ♙ ♙ ♙ ♙ 6\n"
+            "7 ♖ ♘ ♗ ♕ ♔ ♗ ♘ ♖ 7\n"
+            "  0 1 2 3 4 5 6 7\n"
+        )
+        self.assertEqual(str(self.board), expected_str)
 
+   
     
 
 if __name__ == '__main__':
