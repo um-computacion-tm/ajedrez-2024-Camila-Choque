@@ -1,3 +1,34 @@
+# [1.1.35] 28-09-2024
+### Agregado 
+- Se hicieron cambios varios cambios.
+- Se agrego el test_cli.
+- Se hizo la interfaz.
+----------------------------------------------------
+# [1.1.34] 26-09-2024
+### Agregado 
+- Se hicieron cambios en board.
+- Se hicieron cambios en test_board.
+- Se agregaron funciones en chess.
+- Se hicieron los test de chess.
+----------------------------------------------------
+# [1.1.33] 25-09-2024
+### Agregado 
+- Se movio la funcion que verifica los movimeitnos verticales y horizonrales a piece.
+- Se modificaron los test de rook.
+- La funcion que verifica la captura y si una pieza es del mismo color se movio a piece.
+- Se agrego en board una funcion que ve si los movimientos son validos.
+- Se agregaron los test que verifican las funciones de board.
+- Se agregaron funciones en board.
+----------------------------------------------------
+# [1.1.32] 24-09-2024
+### Agregado 
+- Se agrego la funcion que valida los movimientos de la reina reciclando los movimientos
+  de la torre y el alfil.
+- Se creo todos los test necesarios de la reina.
+- Se agrego la funcion que valida los movimeintos del rey.
+- Se realizaron todos los test que verifican los movimientos del rey.
+----------------------------------------------------
+
 # [1.1.31] 23-09-2024
 ### Agregado 
 - Se hicieron pequeños cambios en la funcion que valida el movimiento del peon.

@@ -1,42 +1,26 @@
 from piezas.piece import Piece
+from piezas.rook import Rook
+from piezas.bishop import Bishop
 
 
 class Queen(Piece):
+ black_str ="♛"
+ white_str ="♕"
+ 
 
- def __init__(self,movimiento):
-  self.nombre = Queen
-  self.movimiento = movimiento
+ def __init__(self,color):
+  self.__bishop__ = Bishop(color)
+  self.__rook__ = Rook(color)
+  super().__init__(color)
 
-""""
-def valid_move_queen(self, from_row, from_col, to_row, to_col):
-   #MOVIMIENTO HORIZONTAL
-   if from_row == to_row and from_col != to_col:
-            return self.is_clear_path(from_row, from_col, to_row, to_col, Board)
-   
-   #MOVIMIENTO VERTICAL
-   elif from_col == to_col and from_row != to_row:
-       return self.is_clear_path((from_row, from_col, to_row, to_col, Board))
-   
-   # Movimiento diagonal
-   elif abs(from_row - to_row) == abs(from_col - to_col):
-        return self.is_clear_path(from_row, from_col, to_row, to_col, Board)
-  
-   return False
+#Valida los movimientos de la reina
+ def movimiento(self, row, col, board):
+    possibles = []
 
-def is_clear_path(self, from_row, from_col, to_row, to_col, board):
-        # Chequeo para ver si hay obstáculos en el camino
-        row_step = 1 if to_row > from_row else -1 if to_row < from_row else 0
-        col_step = 1 if to_col > from_col else -1 if to_col < from_col else 0
+    # Movimientos diagonales (Alfil)
+    possibles += self.__bishop__.movimiento(row, col, board)
 
-        current_row = from_row + row_step
-        current_col = from_col + col_step
-
-        while current_row != to_row or current_col != to_col:
-            if board.get_piece(current_row, current_col) is not None:
-                return False
-            current_row += row_step
-            current_col += col_step
-
-        return True
-
-"""
+    # Movimientos verticales y horizontales (Torre)
+    possibles += self.__rook__.movimiento(row, col, board)
+    
+    return possibles
