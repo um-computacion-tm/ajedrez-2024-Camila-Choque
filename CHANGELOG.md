@@ -1,3 +1,9 @@
+# [1.1.35] 28-09-2024
+### Agregado 
+- Se hicieron cambios varios cambios.
+- Se agrego el test_cli.
+- Se hizo la interfaz.
+----------------------------------------------------
 # [1.1.34] 26-09-2024
 ### Agregado 
 - Se hicieron cambios en board.

@@ -15,7 +15,7 @@ class TestHorse(unittest.TestCase):
     def test_movimientos_caballo(self):  #CABALLOS BLANCOS
         self.board.set_piece(4,3 ,self.__hw__)
         movimientos = [(6, 4),(6, 2),(2, 4),(2, 2),(5, 5), (5, 1),(3, 5),(3, 1)]
-        resultados = self.__hw__.movimientos_caballo(4, 3, self.board)
+        resultados = self.__hw__.movimiento(4, 3, self.board)
         self.assertEqual(resultados, movimientos)
 
     def test_movimientos_con_compañeros_en_el_camino(self): #CABALLOS BLANCOS
@@ -23,7 +23,7 @@ class TestHorse(unittest.TestCase):
         self.board.set_piece(5,1 , Piece("WHITE"))  
         self.board.set_piece(5,5 , Piece("WHITE"))
         resultados= [(6, 4),(6, 2),(2, 4),(2, 2),(3, 5),(3, 1)]
-        resultado_esperado = self.__hw__.movimientos_caballo(4, 3, self.board)
+        resultado_esperado = self.__hw__.movimiento(4, 3, self.board)
         self.assertEqual(sorted(resultado_esperado), sorted(resultados))
 
     def test_movimientos_con_compañeros_en_el_camino(self): #CABALLOS NEGROS
@@ -31,7 +31,7 @@ class TestHorse(unittest.TestCase):
         self.board.set_piece(4,5 , Piece("BLACK"))  
         self.board.set_piece(4,3 , Piece("BLACK"))
         resultados= [(3, 6),(3, 2),(1, 6),(1, 2),(0,5),(0,3)] #(0,5) y (0,3) estan fuera del tablero?
-        resultado_esperado = self.__hb__.movimientos_caballo(2, 4, self.board)
+        resultado_esperado = self.__hb__.movimiento(2, 4, self.board)
         self.assertEqual(sorted(resultado_esperado), sorted(resultados))
 
     def test_movimientos_con_captura(self): #BLANCAS

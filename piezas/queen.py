@@ -13,6 +13,7 @@ class Queen(Piece):
   self.__rook__ = Rook(color)
   super().__init__(color)
 
+#Valida los movimientos de la reina
  def movimiento(self, row, col, board):
     possibles = []
 
@@ -20,6 +21,6 @@ class Queen(Piece):
     possibles += self.__bishop__.movimiento(row, col, board)
 
     # Movimientos verticales y horizontales (Torre)
-    possibles += self.__rook__.movimientos_horizontales_y_verticales(row, col, board)
+    possibles += self.__rook__.movimiento(row, col, board)
     
     return possibles

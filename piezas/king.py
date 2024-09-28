@@ -9,7 +9,7 @@ class King(Piece):
 
         
     #VERIFICA LOS MOVIMIENTOS DIAGONALES,HORIZONTALES Y VERTICALES, SOLO AVAZA UNA CASILLA 
-    def movimientos_rey(self, from_row, from_col, board):
+    def movimiento(self, from_row, from_col, board):
         nuevos_movimientos = []
         direcciones = [(-1, -1), (-1, 0), (-1, 1), (0, -1), (0, 1), (1, -1), (1, 0), (1, 1)]
 

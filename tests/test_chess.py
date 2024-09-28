@@ -4,6 +4,7 @@ from game.board import Board
 from game.exceptions import InvalidMove
 from game.exceptions import InvalidTurn
 from game.exceptions import EmptyPosition
+from piezas.rook import Rook
 
 class TestBoard(unittest.TestCase):
 
@@ -20,15 +21,11 @@ class TestBoard(unittest.TestCase):
         self.assertEqual(self.chess.turn, "WHITE")
 
     def test_change_turn(self):
-    # Verifca el turno inicial debería ser WHITE
+
      self.assertEqual(self.chess.turn, "WHITE")
-    # Cambia el turno
      self.chess.change_turn()
-    # Verifica que el turno ahora es BLACK
      self.assertEqual(self.chess.turn, "BLACK")
-    # Cambia el turno de nuevo
      self.chess.change_turn()
-    # Verifica que el turno vuelve a ser WHITE
      self.assertEqual(self.chess.turn, "WHITE")
 
     def test_fin(self):
@@ -46,10 +43,22 @@ class TestBoard(unittest.TestCase):
         with self.assertRaises(EmptyPosition):
             self.chess.validar(3, 3, 4, 4)  
 
-    def test_validar_movimiento_invalido(self):
-        # Intenta mover la torre a una posición no válida (
-        with self.assertRaises(InvalidMove):
-            self.chess.validar(0, 0, 1, 1)  
+    def test_turno_invalido(self):
+    
+        board = Board(for_test=True)
+        board.set_piece(0, 0, Rook("BLACK"))
+        setattr(self.chess, '_Chess__board__', board)
+        with self.assertRaises(InvalidTurn):
+            self.chess.validar(0, 0, 1, 0)
 
+    def test_movimiento_invalido(self):
+      
+        board = Board(for_test=True)
+        board.set_piece(7, 0, Rook("WHITE"))
+        setattr(self.chess, '_Chess__board__', board)
+        with self.assertRaises(InvalidMove):
+            self.chess.validar(7, 0, 6, 1)
+if __name__ == '__main__':
+    unittest.main()
     
     

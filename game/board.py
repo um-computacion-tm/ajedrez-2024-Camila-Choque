@@ -14,10 +14,10 @@ class Board:
             self.__positions__.append([None] * 8)
         if not for_test:
             #POSICIONES TORRES
-            self.__positions__[0][0] = Rook("BLACK") # Black
-            self.__positions__[0][7] = Rook("BLACK") # Black
+            self.__positions__[0][0] = Rook("BLACK") 
+            self.__positions__[0][7] = Rook("BLACK") 
             self.__positions__[7][0] = Rook("WHITE") 
-            self.__positions__[7][7] = Rook("WHITE") # White# White
+            self.__positions__[7][7] = Rook("WHITE") 
             #PISICIONES REY
             self.__positions__[0][4] = King("BLACK") 
             self.__positions__[7][4] = King("WHITE") 
@@ -41,15 +41,14 @@ class Board:
 
 
         
-
+    #Devuelve la pieza en la posición especificada en el tablero
     def get_piece(self, row, col):
         if 0 <= row < 8 and 0 <= col < 8:
             return self.__positions__[row][col]
         else:
             raise OutOfBoard("Fuera de Rango")
-
-
-
+        
+    #Genera una representación en cadena del tablero
     def __str__(self):
         board_str = "  0 1 2 3 4 5 6 7\n"  
         for i, row in enumerate(self.__positions__):
@@ -63,23 +62,22 @@ class Board:
         board_str += "  0 1 2 3 4 5 6 7\n"  
         return board_str
     
- 
-   
-   
+
+   #Establece la pieza en la posición especificada del tablero
     def set_piece(self, row, col, piece):
         self.__positions__[row][col] = piece
 
-    
+    #Mueve una pieza desde la posición de origen especificada a la posición de destino
     def move(self, from_row, from_col, to_row, to_col):
         origin = self.get_piece(from_row, from_col)
         self.set_piece(to_row, to_col, origin)
         self.set_piece(from_row, from_col, None)
 
-    #OBTENER MOVIMIENTOS VALIDOS
+    #Obtener movimientos validos
     def ver_movimientos_validos(self, row, col):
         piece = self.get_piece(row, col)
         if piece is not None:
-            return piece.control(row, col, self)
+            return piece.movimiento(row, col, self)
         else:
             return []
         
