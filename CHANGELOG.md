@@ -1,3 +1,8 @@
+# [1.1.36] 29-09-2024
+### Agregado 
+- Se refactorizo
+----------------------------------------------------
+
 # [1.1.35] 28-09-2024
 ### Agregado 
 - Se hicieron cambios varios cambios.
