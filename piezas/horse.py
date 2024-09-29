@@ -1,26 +1,22 @@
 
 from piezas.piece import Piece
+from piezas import direcciones_horse
 class Horse(Piece):
     black_str ="♞"  
     white_str ="♘" 
+    possible_moves = direcciones_horse
     
     def __init__(self, color):
         super().__init__(color)
 
 
+
     #Verifica los movimientos del caballo
     def movimiento(self,row, col,board):
         moves = []
-    #Lista de movimientos posibles en forma de L
-        possible_moves = [
-          (2, 1), (2, -1),   #Dos hacia arriba, una a la derecha / izquierda
-          (-2, 1), (-2, -1), #Dos hacia abajo, una a la derecha / izquierda
-          (1, 2), (1, -2),   #Una hacia arriba, dos a la derecha / izquierda
-          (-1, 2), (-1, -2)  #Una hacia abajo, dos a la derecha / izquierda
-        ] 
 
     #Calcular todos los movimientos
-        for move in possible_moves:
+        for move in self.possible_moves:
             new_row = row + move[0]
             new_col = col + move[1]
 
