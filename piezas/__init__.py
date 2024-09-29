@@ -6,3 +6,4 @@ direcciones_horse =  [
           (-1, 2), (-1, -2)  #Una hacia abajo, dos a la derecha / izquierda
         ] 
 direcciones_torre = [(-1, 0), (1, 0), (0, -1), (0, 1)]
+direcciones_alfil =[(1, 1), (1, -1), (-1, 1), (-1, -1)]
