@@ -1,9 +1,9 @@
 from piezas.piece import Piece
-from piezas import direcciones_king
+from piezas import direcciones
 class King(Piece):
     black_str ="♚"
     white_str ="♔"
-    direcciones = direcciones_king
+    direcciones = direcciones['rey']
     
     def __init__(self, color):
         super().__init__(color)

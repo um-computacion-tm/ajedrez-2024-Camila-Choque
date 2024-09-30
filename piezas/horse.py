@@ -1,10 +1,10 @@
 
 from piezas.piece import Piece
-from piezas import direcciones_horse
+from piezas import direcciones
 class Horse(Piece):
     black_str ="♞"  
     white_str ="♘" 
-    possible_moves = direcciones_horse
+    possible_moves = direcciones['caballo']
     
     def __init__(self, color):
         super().__init__(color)
