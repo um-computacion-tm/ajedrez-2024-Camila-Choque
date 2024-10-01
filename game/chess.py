@@ -2,11 +2,14 @@ from game.board import Board
 from game.exceptions import InvalidMove
 from game.exceptions import InvalidTurn
 from game.exceptions import EmptyPosition
+from piezas.king import King
 
 class Chess():
     def __init__(self):
         self.__board__ = Board()
-        self.__turn__ = "WHITE"  #Este atributo rastrea de quién es el turno para mover una pieza.
+        self.__turn__ = "WHITE"
+        
+                                #Este atributo rastrea de quién es el turno para mover una pieza.
        
                                  #Se inicializa como "white", indicando que las blancas tienen el primer turno.
     #Alterna el turno de los jugadores
@@ -49,31 +52,33 @@ class Chess():
         # Realizar el movimiento si es válido
         self.__board__.set_piece(to_row, to_col, origin)
         self.__board__.set_piece(from_row, from_col, None)
-        origin.__primer_movimiento__ = False 
-
-        # Cambiar el turno después de un movimiento exitoso
+        origin.__primer_movimiento__ = False
+        self.check_kings()
         self.change_turn()
-""""
-    def partida_terminada( piezas_blancas, piezas_negras):
+
+       
     
-    # Verificar si el rey blanco ha sido capturado
-        rey_blanco_capturado = not any(pieza == 'KING' for pieza in piezas_blancas)
 
-    # Verificar si el rey negro ha sido capturado
-        rey_negro_capturado = not any(pieza == 'KING' for pieza in piezas_negras)
+    def check_kings(self):
+        white_king_present = False
+        black_king_present = False
 
-    # Verificar si no hay piezas blancas
-        no_piezas_blancas = len(piezas_blancas) == 0
+        for row in range(8):
+            for col in range(8):
+                piece = self.__board__.get_piece(row, col)
+                if isinstance(piece, King):
+                    if piece.__color__ == "WHITE":
+                        white_king_present = True
+                    elif piece.__color__ == "BLACK":
+                        black_king_present = True
 
-    # Verificar si no hay piezas negras
-        no_piezas_negras = len(piezas_negras) == 0
+        if not white_king_present or not black_king_present:
+            winner = "WHITE" if white_king_present else "BLACK"
+            self.fin_ganador(winner)
+            return winner  
+        return None  
+    
+    def fin_ganador(self, winner):
+        self.is_playing = False
+        print(f"Fin de la Partida. El ganador es: {winner}")
 
-    # La partida termina si alguna de las condiciones se cumple
-        return rey_blanco_capturado or rey_negro_capturado or no_piezas_blancas or no_piezas_negras
-
-"""
-
-
-   
-        
-          

@@ -5,6 +5,7 @@ from game.exceptions import InvalidMove
 from game.exceptions import InvalidTurn
 from game.exceptions import EmptyPosition
 from piezas.rook import Rook
+from piezas.king import King
 
 class TestBoard(unittest.TestCase):
 
@@ -58,6 +59,30 @@ class TestBoard(unittest.TestCase):
         setattr(self.chess, '_Chess__board__', board)
         with self.assertRaises(InvalidMove):
             self.chess.validar(7, 0, 6, 1)
+
+    def test_ambos_kings_estan(self):
+
+        self.chess.__board__.set_piece(7, 4, King("WHITE"))
+        self.chess.__board__.set_piece(0, 4, King("BLACK"))
+
+        self.chess.check_kings()
+        self.assertTrue(self.chess.is_playing())
+        self.assertIsNone(self.chess.check_kings())
+
+  
+    def test_validar_fin_del_juego(self):
+         self.chess.__board__.set_piece(0, 4, King("BLACK"))
+         self.chess.__board__.set_piece(1, 4, Rook("WHITE"))
+
+         self.chess.validar(1, 4, 0, 4)
+
+         self.assertFalse(self.chess.is_playing)
+         result = self.chess.check_kings()
+         self.assertEqual(result, "WHITE")
+
+
+
+
 if __name__ == '__main__':
     unittest.main()
     

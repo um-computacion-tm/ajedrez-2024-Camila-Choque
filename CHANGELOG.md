@@ -1,3 +1,9 @@
+# [1.1.38] 01-10-2024
+### Agregado 
+- Se refactorizo
+- Se agrego el metodo que verifica si queda algun rey en el juego.
+----------------------------------------------------
+
 # [1.1.37] 30-09-2024
 ### Agregado 
 - Se refactorizo
