@@ -4,13 +4,13 @@
 Jugar al ajedrez implica que dos jugadores se enfrenten en un tablero de 8x8 casillas, con el objetivo de capturar al rey del oponente.Cada tipo de pieza se mueve de manera específica: los peones avanzan hacia adelante, las torres se mueven en línea recta, los caballos saltan en forma de "L", entre otros. Los jugadores alternan turnos, moviendo una sola pieza por turno.
 
 # EJECUCION DEL JUEGO
- 1- git clone https://github.com/um-computacion-tm/ajedrez-2024-Camila-Choque.git
- 2- pip install -r requirements.txt
- 3- python3 cli.py
+ - git clone https://github.com/um-computacion-tm/ajedrez-2024-Camila-Choque.git
+ - pip install -r requirements.txt
+ - python3 cli.py
 
  # DOCKERFILE
-1- docker buildx build -t ajedrez .
-2- docker run -i ajedrez
+- docker buildx build -t ajedrez .
+- docker run -i ajedrez
 
 # CircleCi
 [![CircleCI](https://dl.circleci.com/status-badge/img/gh/um-computacion-tm/ajedrez-2024-Camila-Choque/tree/main.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/um-computacion-tm/ajedrez-2024-Camila-Choque/tree/main) 
