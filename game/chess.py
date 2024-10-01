@@ -56,8 +56,6 @@ class Chess():
         self.check_kings()
         self.change_turn()
 
-       
-    
 
     def check_kings(self):
         white_king_present = False
@@ -77,6 +75,7 @@ class Chess():
             self.fin_ganador(winner)
             return winner  
         return None  
+
     
     def fin_ganador(self, winner):
         self.is_playing = False

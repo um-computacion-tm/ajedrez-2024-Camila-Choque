@@ -7,5 +7,5 @@ WORKDIR /ajedrez-2024-Camila-Choque
 RUN pip install -r requirements.txt
 CMD ["sh", "-c", "coverage run -m unittest && coverage report -m && python cli.py"]
 
-# docker buildx build -t /ajedrez-2024-Camila-Choque.
-# docker run -i /ajedrez-2024-Camila-Choque
+# docker buildx build -t ajedrez .
+# docker run -i ajedrez
