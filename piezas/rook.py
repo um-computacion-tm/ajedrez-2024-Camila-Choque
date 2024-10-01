@@ -9,10 +9,9 @@ class Rook(Piece):
    direcciones = direcciones_torre
   
 
-   def __init__(self, color):
-        super().__init__(color)
+  
 
-   #Verifica los movimientos de la torre
+   
   
         
 

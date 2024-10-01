@@ -53,6 +53,27 @@ class Chess():
 
         # Cambiar el turno después de un movimiento exitoso
         self.change_turn()
+""""
+    def partida_terminada( piezas_blancas, piezas_negras):
+    
+    # Verificar si el rey blanco ha sido capturado
+        rey_blanco_capturado = not any(pieza == 'KING' for pieza in piezas_blancas)
+
+    # Verificar si el rey negro ha sido capturado
+        rey_negro_capturado = not any(pieza == 'KING' for pieza in piezas_negras)
+
+    # Verificar si no hay piezas blancas
+        no_piezas_blancas = len(piezas_blancas) == 0
+
+    # Verificar si no hay piezas negras
+        no_piezas_negras = len(piezas_negras) == 0
+
+    # La partida termina si alguna de las condiciones se cumple
+        return rey_blanco_capturado or rey_negro_capturado or no_piezas_blancas or no_piezas_negras
+
+"""
+
+
    
         
           
