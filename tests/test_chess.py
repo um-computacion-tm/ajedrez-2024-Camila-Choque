@@ -60,22 +60,17 @@ class TestBoard(unittest.TestCase):
         with self.assertRaises(InvalidMove):
             self.chess.validar(7, 0, 6, 1)
 
-    def test_ambos_kings_estan(self):
-
+    def test_reyes_presentes(self):
         self.chess.__board__.set_piece(7, 4, King("WHITE"))
         self.chess.__board__.set_piece(0, 4, King("BLACK"))
-
         self.chess.check_kings()
         self.assertTrue(self.chess.is_playing())
         self.assertIsNone(self.chess.check_kings())
 
-  
     def test_validar_fin_del_juego(self):
          self.chess.__board__.set_piece(0, 4, King("BLACK"))
          self.chess.__board__.set_piece(1, 4, Rook("WHITE"))
-
          self.chess.validar(1, 4, 0, 4)
-
          self.assertFalse(self.chess.is_playing)
          result = self.chess.check_kings()
          self.assertEqual(result, "WHITE")
