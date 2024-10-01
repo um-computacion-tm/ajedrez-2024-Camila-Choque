@@ -4,7 +4,7 @@ from game.exceptions import InvalidMove, InvalidTurn, EmptyPosition
 def main():
 
     chess = Chess()
-    while chess.is_playing():
+    while chess.is_playing:
         play(chess)
 
 def play(chess):
@@ -30,6 +30,8 @@ def play(chess):
             to_col = int(input("Columna destino: "))
 
             chess.validar(from_row, from_col, to_row, to_col)
+            
+          
         elif menu == "2":
             chess.fin()
             return
